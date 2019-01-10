@@ -1,24 +1,13 @@
 <template>
   <div class="header-view" :style="{height: height}">
     <div class="left flex-c-l">
-      <!-- <el-button class="no-drag" size="mini" type="text" @click="back">
-            <i class="btn el-icon-arrow-left"></i>
-        </el-button>
-        <el-button class="no-drag" size="mini" type="text" @click="advance">
-            <i class="btn el-icon-arrow-right"></i>
-      </el-button>-->
       <el-button class="no-drag hover-color" size="mini" type="text" @click="refresh">
         <i class="btn el-icon-refresh"></i>
       </el-button>
-
-      <!-- <div class="search no-drag">
-            <el-input size="mini" prefix-icon="el-icon-search" placeholder="搜索音乐、MV、歌单、用户"></el-input>
-      </div>-->
       <el-button class="no-drag hover-color" size="mini" type="text" @click="refresh">
         <i class="btn el-icon-edit">新增</i>
       </el-button>
-
-      <el-button class="no-drag hover-color" size="mini" type="text" @click="landing">
+      <el-button class="no-drag hover-color" size="mini" type="text" @click="about">
         <i class="btn el-icon-info">关于</i>
       </el-button>
     </div>
@@ -30,13 +19,19 @@
         <i class="btn el-icon-close"></i>
       </el-button>
     </div>
+    <about/>
   </div>
 </template>
 
 <script>
 const { BrowserWindow } = require("electron");
 
+import about from './about'
+
 export default {
+    components: {
+        about
+    },
   props: {
     height: {
       type: String,
@@ -69,9 +64,8 @@ export default {
     refresh() {
       this.$bus.$emit("page-refresh", this.$route.name);
     },
-    landing() {
-       let win = new this.$electron.BrowserWindow({ titleBarStyle: 'customButtonsOnHover', frame: false })
-       win.show()
+    about() {
+       this.$bus.$emit('about');
     }
   }
 };
