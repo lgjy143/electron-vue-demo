@@ -5,8 +5,9 @@
             <header-view height="40px"/>
         </el-header>
         <el-main class="main">
-            <router-view></router-view>
+            <!-- <router-view></router-view> -->
             <!-- <SystemInformation /> -->
+            <hub/>
         </el-main>
     </el-container>
 </div>
@@ -15,11 +16,13 @@
 <script>
 import SystemInformation from "../components/LandingPage/SystemInformation"
 import HeaderView from "../components/Header/"
+import Hub from "../components/Hub/hub.vue"
 
 export default {
   components: {
     SystemInformation,
-    HeaderView
+    HeaderView,
+    Hub
   }
 };
 </Script

@@ -1,0 +1,48 @@
+<template>
+<div>
+    <el-row>
+        <el-col :span="6" v-for="(o) in 6" :key="o" :offset="1">
+            <el-card shadow="hover" class="box-card">
+                <div slot="header" class="clearfix">
+                    <span>卡片名称</span>
+                    <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
+                </div>
+                <div v-for="o in 4" :key="o" class="text item">
+                    {{'列表内容 ' + o }}
+                </div>
+            </el-card>
+        </el-col>
+    </el-row>
+</div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style scoped>
+.text {
+    font-size: 14px;
+}
+
+.item {
+    margin-bottom: 18px;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both
+}
+
+.box-card {
+    width: 200px;
+    margin-bottom: 5px; 
+}
+</style>
