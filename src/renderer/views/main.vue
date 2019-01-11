@@ -6,7 +6,7 @@
         </el-header>
         <el-main class="main">
             <router-view></router-view>
-            <SystemInformation />
+            <!-- <SystemInformation /> -->
         </el-main>
     </el-container>
 </div>
