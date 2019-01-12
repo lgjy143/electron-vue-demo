@@ -1,9 +1,9 @@
 <template>
   <div class="header-view" :style="{height: height}">
     <div class="left flex-c-l">
-      <el-button class="no-drag hover-color" size="mini" type="text" @click="refresh">
+      <!-- <el-button class="no-drag hover-color" size="mini" type="text" @click="refresh">
         <i class="btn el-icon-refresh"></i>
-      </el-button>
+      </el-button> -->
       <el-button class="no-drag hover-color" size="mini" type="text" @click="refresh">
         <i class="btn el-icon-edit">新增</i>
       </el-button>
