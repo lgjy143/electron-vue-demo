@@ -1,5 +1,5 @@
 <template>
-  <div class="header-view" :style="{height: height}">
+  <div class="header-view"  :style="{height: height}">
     <div class="left flex-c-l">
       <!-- <el-button class="no-drag hover-color" size="mini" type="text" @click="refresh">
         <i class="btn el-icon-refresh"></i>

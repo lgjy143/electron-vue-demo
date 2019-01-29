@@ -1,7 +1,7 @@
 <template>
 <div>
     <el-container class="container">
-        <el-header class="header" height="40px" style="-webkit-app-region: drag">
+        <el-header class="header nav-bar" height="40px" style="-webkit-app-region: drag">
             <header-view height="40px"/>
         </el-header>
         <el-main class="main">

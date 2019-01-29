@@ -6,6 +6,8 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
+import nedb from './datastore'
+
 import App from './App'
 import router from './router'
 import store from './store'
@@ -22,6 +24,8 @@ Vue.prototype.globalClick = function (callback) {
 };
 
 Vue.prototype.$bus = new Vue()
+/* db */
+Vue.prototype.$nedb = nedb
 
 /* eslint-disable no-new */
 new Vue({
